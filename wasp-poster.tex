@@ -35,10 +35,11 @@
 \newcommand{\mytitlefont}{\fontfamily{\familydefault}\selectfont }
 \newcommand{\mytextfont}{\fontfamily{\familydefault}\selectfont }
 % Comment the four lines below to skip WASP fonts
-\usepackage{MinionPro}
-\usepackage{MyriadPro}
-\renewcommand{\mytitlefont}{\fontfamily{MyriadPro-LF}\selectfont }
-\renewcommand{\mytextfont}{\fontfamily{MinionPro-LF}\selectfont }
+% Un-comment the four lines below ONLY if you have MinionPro and MyriadPro installed on your TeX system.
+%\usepackage{MinionPro}
+%\usepackage{MyriadPro}
+%\renewcommand{\mytitlefont}{\fontfamily{MyriadPro-LF}\selectfont }
+%\renewcommand{\mytextfont}{\fontfamily{MinionPro-LF}\selectfont }
 
 \definecolor{wasppink}{RGB}{203,166,169} 
 \definecolor{waspgrey}{RGB}{88,89,91}
@@ -157,7 +158,11 @@
   \input{parts/references}
 }
 
-\headerbox{}{name=foottext, column=0, span=2, above=bottom, textborder=none,headerborder=none,boxheaderheight=0pt,boxColorOne=wasp_banner_dark}{\hfill \includegraphics[height=1cm]{waspwhite}}
+
+\headerbox{}{name=foottext, column=0, span=2, above=bottom, textborder=none, headerborder=none, headershape=rectangle, headershade=plain, boxshade=plain, boxheaderheight=0pt, boxColorOne=wasp_banner_dark, borderColor=wasp_banner_dark, headerColorOne=wasp_banner_dark, boxpadding=0.5cm}{%
+	\hfill\includegraphics[height=1cm]{waspwhite}%
+}
+
 
 
 \end{poster}
